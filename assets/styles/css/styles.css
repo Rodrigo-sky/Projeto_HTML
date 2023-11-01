@@ -33,3 +33,55 @@ header a{
 #navbarNavDropdown{
     justify-content: flex-end;
 }
+
+#destaque{
+    padding: 3% 0%;
+}
+
+#destaque img{
+    width:100%
+}
+
+#txt-home{
+    width: 60%;
+    padding-top: 5%;
+}
+#txt-home p:first-child{
+    padding-top: 5%;
+}
+
+#head_img{
+    animation: trocar 6s infinite;
+}
+
+@keyframes trocar {
+    0% {
+        background-image: url(/assets/img/dog-head.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+    }
+    60% {
+        background-image: url(/assets/img/cato-head.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+    }
+    99.99% {
+        background-image: url(/assets/img/dog-head.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+    }
+}
+
+@media(max-width:600px) {
+    
+    #txt-home{
+        width: 100%;
+    }
+
+    #destaque{
+        padding: 5% 0%;
+    }
+}

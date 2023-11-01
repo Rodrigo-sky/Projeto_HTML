@@ -42,16 +42,34 @@ header a{
     width:100%
 }
 
-#txt-home{
+#txt_home {
     width: 60%;
     padding-top: 5%;
 }
-#txt-home p:first-child{
+#txt_home p:first-of-type{
     padding-top: 5%;
 }
 
 #head_img{
     animation: trocar 6s infinite;
+}
+
+#index_news{
+    padding: 10% 20% 5%;
+}
+#index_news h2{
+    text-align: center;
+}
+#index_news img{
+    width: 100%;
+    max-width: 800px;
+}
+
+footer{
+    padding: 2% 5%;
+    text-align: center;
+    background-color: #198754;
+    color: white;
 }
 
 @keyframes trocar {
@@ -77,11 +95,19 @@ header a{
 
 @media(max-width:600px) {
     
-    #txt-home{
+    #txt_home{
         width: 100%;
     }
 
     #destaque{
         padding: 5% 0%;
+    }
+
+    #head_img{
+        animation: none;
+    }
+
+    #index_news{
+        padding: 10% 10%;
     }
 }

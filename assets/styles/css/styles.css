@@ -65,6 +65,53 @@ header a{
     max-width: 800px;
 }
 
+#quem_samus h1{
+    text-align: center;
+    padding-top: 5%;
+}
+#quem_samus .row{
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    padding:  2% 0%;
+}
+#quem_samus .row div:first-child{
+    width: 30%;
+    padding: 5% 3%;
+}
+#quem_samus .row div:nth-child(2){
+    width: 70%;
+    text-align: center;
+}
+#quem_samus .row div:nth-child(2) img{
+    width: 100%;
+    max-width: 589px;
+    border-radius: 10px;
+    padding: 3% 0% ;
+}
+
+#quem_samus{
+    padding-bottom: 2%;
+}
+
+#quem_samus #tres_pilares{
+    align-items: stretch;
+}
+
+#quem_samus #tres_pilares div{
+    width: 30%;
+    padding: 3% 2%;
+    background: #198754;
+    border-radius: 10px;
+    color: #fff;
+    margin: 4% 0%;
+}
+
+#quem_samus #tres_pilares div h3{
+    text-align: center;
+    padding-bottom: 4%;
+}
+
 footer{
     padding: 2% 5%;
     text-align: center;
@@ -109,5 +156,29 @@ footer{
 
     #index_news{
         padding: 10% 10%;
+    }
+
+    #quem_samus .row{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    
+    #quem_samus .row div:first-child{
+        width: 85%;
+    }
+    #quem_samus .row div:nth-child(2){
+        width: 85%;
+    }
+
+    #quem_samus #tres_pilares{
+        align-items: center;
+    }
+
+    #quem_samus #tres_pilares div{
+        width: 80%;
+        padding: 3% 2%;
+        background: #198754;
+        border-radius: 10px;
+        color: #fff;
     }
 }

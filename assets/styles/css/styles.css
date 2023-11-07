@@ -112,6 +112,15 @@ header a{
     padding-bottom: 4%;
 }
 
+.formAgen{
+    width: 50%;
+}
+
+#sintomas{
+    width: 100%;
+    aspect-ratio: 16/2;
+}
+
 footer{
     padding: 2% 5%;
     text-align: center;
@@ -121,19 +130,25 @@ footer{
 
 @keyframes trocar {
     0% {
-        background-image: url(/assets/img/dog-head.jpg);
+        /* para XAMP usar o diretorio da pasta, caso use Liveserver USAR ESTE*/
+        /* background-image: url(/assets/img/dogHead.jpg);  */
+        background-image: url(/projeto_html/assets/img/dogHead.jpg);
         background-repeat: no-repeat;
         background-position: right;
         background-size: contain;
     }
     60% {
-        background-image: url(/assets/img/cato-head.jpg);
+        /* para XAMP usar o diretorio da pasta, caso use Liveserver USAR ESTE*/
+        /* background-image: url(/assets/img/catoHead.jpg);  */
+        background-image: url(/projeto_html/assets/img/catoHead.jpg);
         background-repeat: no-repeat;
         background-position: right;
         background-size: contain;
     }
     99.99% {
-        background-image: url(/assets/img/dog-head.jpg);
+        /* para XAMP usar o diretorio da pasta, caso use Liveserver USAR ESTE */
+        /* background-image: url(/assets/img/dogHead.jpg); */
+        background-image: url(/projeto_html/assets/img/dogHead.jpg);
         background-repeat: no-repeat;
         background-position: right;
         background-size: contain;

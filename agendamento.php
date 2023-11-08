@@ -103,7 +103,7 @@
 			</div>
             <br>
             
-            <button id="inserir">Inserir</button>
+            <button class="btn btn-success" id="inserir">Inserir</button>
             <br>
 			<?php include 'listar_agendamento.php' ?>
 		</div>

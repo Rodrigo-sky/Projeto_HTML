@@ -114,12 +114,27 @@ header a{
 
 .formAgen{
     width: 50%;
+    padding: 0.5% 1%;
 }
 
-#sintomas{
-    width: 100%;
-    aspect-ratio: 16/2;
+.formAgen input{
+    width: 95%;
 }
+
+#descricaoSintomas{
+    width: 100%;
+    /* aspect-ratio: 16/2; */
+}
+
+#agendapage h1{
+    padding: 2% 0%;
+}
+
+#tabelalistage {
+    margin: 2% 0%;
+    font-size: 1.563vw;
+}
+
 
 footer{
     padding: 2% 5%;
@@ -195,5 +210,12 @@ footer{
         background: #198754;
         border-radius: 10px;
         color: #fff;
+    }
+}
+
+@media(min-width:1025px) {
+    #tabelalistage {
+        margin: 2% 0%;
+        font-size: 16px;
     }
 }

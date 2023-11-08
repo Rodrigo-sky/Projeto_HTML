@@ -5,7 +5,7 @@ $conn = mysqli_connect("localhost", "root", "", "petlife", 3306);
 $sql = "SELECT * FROM agendamentoexame";
 if ($res = mysqli_query($conn, $sql)) {
     if (mysqli_num_rows($res) > 0) {
-        echo "<table border=1 width='80%'>";
+        echo "<table border=1 width='100%' class='table table-striped' id='tabelalistage'>";
         echo "<tr>";
         echo "<th>ID</th>";
         echo "<th>Nome do Tutor</th>";

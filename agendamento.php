@@ -58,7 +58,7 @@
 		</div>
 		<nav class="navbar navbar-expand-lg bg-success">
 			<div class="container">
-				<a class="navbar-brand" href="#"> <img src="assets/img/dog-paw.svg" alt="Logo"
+				<a class="navbar-brand" href="index.html"> <img src="assets/img/dog-paw.svg" alt="Logo"
 						class="d-inline-block align-text-top"> Pet Life</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -68,41 +68,43 @@
 						<li class="nav-item"> <a class="nav-link active" aria-current="page" href="index.html">Home</a> </li>
 						<li class="nav-item"> <a class="nav-link" href="quem_somos.html">Quem Somos</a> </li>
 						<li class="nav-item"> <a class="nav-link" href="agendamento.php">Agendamento</a> </li>
-						<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button"
-								data-bs-toggle="dropdown" aria-expanded="false">
-								Serviços
-							</a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Pronto Atendimento</a></li>
-								<li><a class="dropdown-item" href="#">Hotelaria</a></li>
-								<li><a class="dropdown-item" href="#">nomeExames</a></li>
-							</ul>
-						</li>
+						<li class="nav-item"> <a class="nav-link" href="exames.html">Exames</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
 	<main>
-		<div class="container">
+		<div class="container" id="agendapage">
 			
-            <h2>Agendamento</h2>
+            <h1>Agendamento</h1>
 			<div class="row">
-				<div class="formAgen">Nome Tutor: <input type="text" id="nomeTutor"></div>
-				<div class="formAgen">Contato e-mail: <input type="text" id="emailContato"></div>
+				<div class="formAgen"><b>Nome Tutor:</b><br><input type="text" id="nomeTutor"></div>
+				<div class="formAgen"><b>Contato e-mail:</b><br><input type="text" id="emailContato"></div>
 			</div>
             <div class="row">
-				<div class="formAgen">Data da Consulta: <input type="text" id="dataConsulta"></div>
-				<div class="formAgen">nomeExame: <input type="text" id="nomeExame"></div>
+				<div class="formAgen"><b>Data da Consulta:</b><br><input type="text" id="dataConsulta"></div>
+				<div class="formAgen">
+					<b>Exame:</b><br> 
+					<input type="text" id="nomeExame" list="respostas">
+					<datalist id="respostas">
+						<option value="Clinico Geral">
+						<option value="Exames de sangue">
+  						<option value="Radiografia">
+  						<option value="Ultrassonografia">
+  						<option value="Exames de urina e fezes">
+  						<option value="Testes de alergia">
+					</datalist>
+				</div>
 			</div>
 			<br>
-			<div>descricaoSintomas <br>
-			<input type="text" id="descricaoSintomas">
+			<div><b>Sintomas</b><br>
+			<textarea id="descricaoSintomas" cols="40" rows="5"></textarea>
 			</div>
             <br>
             
             <button id="inserir">Inserir</button>
-            <br><br><br>
+            <br>
 			<?php include 'listar_agendamento.php' ?>
 		</div>
 	</main>

@@ -11,31 +11,58 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 	<title>Pet Life</title>
+	
 	<script>
-        $(function() {
+		function validarFormulario(){
+			let nomeTutor1 = document.getElementById("nomeTutor").value;
+			let emailContato1 = document.getElementById("emailContato").value;
+			let dataConsulta1 = document.getElementById("dataConsulta").value;
+			let nomeExame1 = document.getElementById("nomeExame").value;
+			if (nomeTutor1 == "" || emailContato1 == "" || dataConsulta1 == "" || nomeExame1 == "") {
+				alert("Os campos devem ser preenchidos.");
+				return false;
+			}
+			else if (new Date(dataConsulta1) <= new Date()) {
+				alert("A data da consulta deve ser no futuro.");
+				return false;
+			}
+			else if (!emailContato1.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/)) {
+				alert("Insira um email valido.");
+				return false;
+			}
+			else{
+				console.log("validou");
+				return true;
+			}
+		};
+	
+		$(function() {
 			$('#inserir').click(function() {
 				var nomeTutor = $('#nomeTutor').val();
-                var emailContato = $('#emailContato').val();
-                var dataConsulta = $('#dataConsulta').val();
-                var nomeExame = $('#nomeExame').val();
-                var descricaoSintomas = $('#descricaoSintomas').val();
-                $.post(
+				var emailContato = $('#emailContato').val();
+				var dataConsulta = $('#dataConsulta').val();
+				var nomeExame = $('#nomeExame').val();
+				var descricaoSintomas = $('#descricaoSintomas').val();
+				if(validarFormulario() == true){
+					console.log("xamuel");
+					$.post(
 					'inserir_agendamento.php', 
-                    {
-                    	action: "inserir", 
-                        nomeTutor: nomeTutor, 
-                        emailContato: emailContato, 
-                        dataConsulta: dataConsulta,
-                        nomeExame: nomeExame,
-                        descricaoSintomas: descricaoSintomas
-                    },
-                    function(res) {
-                    	$.post('listar_agendamento.php', {action: "listar"}, function(res) {
-                        	location.reload();
-                        });
-                    }
-                )
-            });
+					{
+						action: "inserir", 
+						nomeTutor: nomeTutor, 
+						emailContato: emailContato, 
+						dataConsulta: dataConsulta,
+						nomeExame: nomeExame,
+						descricaoSintomas: descricaoSintomas
+					},
+					function(res) {
+						$.post('listar_agendamento.php', {action: "listar"}, function(res) {
+							location.reload();
+						});
+					}
+				)
+				}
+			});
 		});
 
 		$(function () {
@@ -46,7 +73,6 @@
 				maxDate: "+1M",
 			});
 		});
-
 	</script>
 </head>
 
@@ -79,14 +105,14 @@
 			
             <h1>Agendamento</h1>
 			<div class="row">
-				<div class="formAgen"><b>Nome Tutor:</b><br><input type="text" id="nomeTutor"></div>
-				<div class="formAgen"><b>Contato e-mail:</b><br><input type="text" id="emailContato"></div>
+				<div class="formAgen"><b>Nome Tutor:</b><br><input type="text" id="nomeTutor" require></div>
+				<div class="formAgen"><b>Contato e-mail:</b><br><input type="text" id="emailContato" require></div>
 			</div>
             <div class="row">
-				<div class="formAgen"><b>Data da Consulta:</b><br><input type="text" id="dataConsulta"></div>
+				<div class="formAgen"><b>Data da Consulta:</b><br><input type="text" id="dataConsulta" require></div>
 				<div class="formAgen">
 					<b>Exame:</b><br> 
-					<input type="text" id="nomeExame" list="respostas">
+					<input type="text" id="nomeExame" list="respostas" require>
 					<datalist id="respostas">
 						<option value="Clinico Geral">
 						<option value="Exames de sangue">

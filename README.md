@@ -1,6 +1,6 @@
 ﻿# Trabalho Final HTML!
 
-Olá, o grupo é composto por Rodrigo Teixeira e Guilherme Aguilar e vamos apresentar o nosso projeto de um site de uma clínica veterinária fictícia chamada Pet Life.
+Olá, o grupo é composto por Rodrigo Teixeira e Guilherme Aguilar e vamos apresentar o nosso projeto de um site de uma clínica veterinária fictícia chamada Pet Life. Os commits foram feitos todos através desta conta do Github porem ambos participaram do desenvolvimento.
 
 O objetivo do site é oferecer serviços de consulta e exame para animais domésticos, além de informações sobre saúde e bem-estar animal. O site foi desenvolvido usando a biblioteca Bootstrap versão 5, que facilita a criação de páginas responsivas e com design moderno. Também usamos jQuery e jQuery UI para adicionar interatividade e efeitos visuais ao site. Além disso, usamos media queries para ajustar o layout do site de acordo com o tamanho da tela do dispositivo. 
 
